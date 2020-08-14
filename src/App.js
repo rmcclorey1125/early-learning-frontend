@@ -4,7 +4,6 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './Home'
 import MultipleChoice from './MultipleChoice';
 import FlashcardContainer from './FlashcardContainer';
-import MatchCardContainer from './MatchCardContainer';
 import Scores from './Scores'
 import NavBar from './NavBar'
 import Auth from './Auth'

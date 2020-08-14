@@ -71,7 +71,7 @@ class PuzzleGame extends React.Component {
 
     render() {
         return (
-            <>
+            <div className="puzzle-container">
                 {this.state.puzzleComplete ? 
                 <>
                     <h1>You completed the Puzzle in {this.state.count} seconds</h1>
@@ -98,7 +98,7 @@ class PuzzleGame extends React.Component {
                     </div>
                 </>
                 }
-            </>
+            </div>
         )
     }
 }

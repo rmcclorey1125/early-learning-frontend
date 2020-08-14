@@ -1,6 +1,5 @@
 .App {
   text-align: center;
-
 }
 
 .App-logo {
@@ -39,7 +38,15 @@
 }
 
 .home {
-  /* display: flex; */
+  background-image: url(./Pictures/Home.gif);
+  background-size: cover;
+  width: 1300px;
+  height: 650px;
+  background-position: top;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   /* background-image: url(Background.gif); */
   /* background-color: chartreuse; */
   /* background: url(Background.gif) no-repeat center center fixed; 
@@ -49,20 +56,14 @@
   background-size: cover; */
 }
 
-.bg {
-  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
-  height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .homepage-box {
   border: 1px solid black;
-  width: 80%;
+  width: 40%;
+  height: 200px;
   background-color: lightgreen;
   display: inline-flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 10px;
@@ -172,3 +173,38 @@ img {
   width: 90px;
   height: 90px;
 }
+
+.puzzle-container {
+  background-image: url(https://i.pinimg.com/originals/b3/82/f6/b382f6ced3915eb59b5b640ac6fd7b29.jpg);
+  background-size: cover;
+  width: 1300px;
+  height: 650px;
+  background-position: top;
+}
+
+/* .login-container {
+  background-image: url(https://images.unsplash.com/photo-1507608869274-d3177c8bb4c7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80);
+  background-image: url(https://www.irishtimes.com/polopoly_fs/1.4068289.1572538782!/image/image.jpg_gen/derivatives/box_620_330/image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  height: 95vh;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+  padding-top: 20%;
+  padding-bottom: 20%;
+  padding-left: 30%;
+  padding-right: 30%;
+} */
+
+/* .bg {
+  background-image: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).jpg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
