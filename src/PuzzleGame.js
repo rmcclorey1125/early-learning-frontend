@@ -74,7 +74,7 @@ class PuzzleGame extends React.Component {
             <div className="puzzle-container">
                 {this.state.puzzleComplete ? 
                 <>
-                    <h1>You completed the Puzzle in {this.state.count} seconds</h1>
+                    <h1 className="puz-message">You completed the Puzzle in {this.state.count} seconds</h1>
                     <button onClick={()=>{this.props.history.push(``)}}>Return Home</button>
                 </>
                 :
@@ -87,14 +87,14 @@ class PuzzleGame extends React.Component {
                         <div className="puz-change" onClick={this.imgPawpatol}><img src="https://4.bp.blogspot.com/-NDWfppuLSlc/WwRIIoIn3OI/AAAAAAAA6OQ/1WTdcONWjSgwjpnd2Gpp5ncMsV7E-DGcgCLcBGAs/s1600/Paw_Patrol_Core_Poster_TM_Towerl_Nick_Jr_Nickelodeon_Preschool_USA_Press.jpg" /></div>
                         <div className="puz-change" onClick={this.imgBlaze}><img src="https://i0.wp.com/intheplayroom.co.uk/wp-content/uploads/2015/03/blazemonstermachines-1024x821.jpg?resize=1024%2C821" /></div>
                     </div>
+                    <div className="timer">
+                        Timer: {this.state.count}
+                    </div>
                     <div className="puzzle">
                         <Puzzle image={this.state.image}
                         level={this.state.level}
                         onDone={this.handleFinish}
                         size={450}/>
-                    </div>
-                    <div>
-                        Timer: {this.state.count}
                     </div>
                 </>
                 }

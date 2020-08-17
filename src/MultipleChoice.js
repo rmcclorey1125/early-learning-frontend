@@ -130,13 +130,13 @@ class MultipleChoice extends React.Component {
             return (
                 <div>
                     <h2>{question}</h2>
-                    <p>{`Question ${currentIndex + 1} of ${this.state.questions.length}`}</p>
+                    <p className='quiz-qu'>{`Question ${currentIndex + 1} of ${this.state.questions.length}`}</p>
                     {
                         options.map(option => 
-                            <p key = {option.id} className={`options ${userAnswer === option? "selected": null}`}
+                            <div key = {option.id} className={`options ${userAnswer === option? "selected": null}`}
                             onClick = {() => this.checkAnswer(option)}>
                                 <img src={option} />
-                            </p>
+                            </div>
                         )
                     }
                     <div>

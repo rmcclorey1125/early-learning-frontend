@@ -6,7 +6,16 @@ import { Nav, Navbar, FormControl, Form, Button, NavDropdown } from 'react-boots
 const NavBar = (props) => {
     return(
         <Navbar bg="primary" variant="dark">
-            <Navbar.Brand as={Link} to="/">Learning</Navbar.Brand>
+            {/* <Navbar.Brand as={Link} to="/">Learning</Navbar.Brand> */}
+            <Navbar.Brand as={Link} to="/">
+                <img
+                    src="/FullLogoNoBG.png"
+                    width="30"
+                    height="30"
+                    className="navImg d-inline-block align-top"
+                    alt="Infinnite Learning Logo"
+                />
+            </Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link as={Link} to="/">Home</Nav.Link>
                 <NavDropdown title="Dropdown" id="basic-nav-dropdown">

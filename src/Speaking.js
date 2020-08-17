@@ -14,7 +14,7 @@ const Speaking = (props) => {
       return (
           <>
             <h1>You got {((props.abcRight.length/26)*100).toFixed(2)}%</h1>
-            <h1>You missed {props.abcWrong.map(letter => `, ${letter}`)}</h1>
+            <h1>You missed {props.abcWrong.map(letter => <h3>{letter}</h3>)}</h1>
             <button onClick={()=>{props.history.push(``); props.endAbc();}}>Return Home</button>
           </>
       )
@@ -26,7 +26,7 @@ const Speaking = (props) => {
             <button onClick={() => SpeechRecognition.startListening({ continuous:true })}>Start</button>
             <button onClick={SpeechRecognition.stopListening}>Stop</button>
             <button onClick={resetTranscript}>Reset</button>
-            <button onClick={() => props.evaluate(reading, text)}>Submit</button>
+            <button onClick={() => props.evaluate(text,reading)}>Submit</button>
     
             <h1>{reading}</h1>
         </div>

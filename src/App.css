@@ -40,13 +40,14 @@
 .home {
   background-image: url(./Pictures/Home.gif);
   background-size: cover;
-  width: 1300px;
-  height: 650px;
+  width: 100%;
+  height: 675px;
   background-position: top;
 
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-around;
   /* background-image: url(Background.gif); */
   /* background-color: chartreuse; */
   /* background: url(Background.gif) no-repeat center center fixed; 
@@ -57,30 +58,97 @@
 }
 
 .homepage-box {
+	border-radius: 25px;
+  
   border: 1px solid black;
   width: 40%;
-  height: 200px;
+  height: 15%;
   background-color: lightgreen;
   display: inline-flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   margin: 10px;
+  
+  cursor: pointer;
+}
+
+#home-puzzle {
+  background-image: url(./Pictures/Puzzle.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+}
+
+#home-quiz {
+  background-image: url(./Pictures/Quiz.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+}
+
+#home-alpha {
+  background-image: url(https://cf.ltkcdn.net/boardgames/images/std/50630-425x282-LetterJumble.jpg);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+}
+
+#home-flash {
+  background-image: url(./Pictures/Flash.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+
+}
+
+#home-score {
+  background-image: url(./Pictures/medal.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-size: cover;
+}
+
+@keyframes bounce {
+  0%, 20%, 60%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px);
+  }
+
+  80% {
+    -webkit-transform: translateY(-10px);
+    transform: translateY(-10px);
+  }
+}
+
+.homepage-box:hover{
+  animation: bounce 1s;
 }
 
 img {
-  height: 10em;
-  width: 10em;
+  height: 14em;
+  width: 14em;
+}
+
+.quiz-qu {
+  margin-top: 10px;
 }
 
 .options {
-  display: inline-block;
-  padding: 5px;
+  display: inline-flex;
+  align-content: center;
+  flex-wrap: wrap;
+  padding: 3px;
+  margin: 6px;
+  /* border: 1px solid black */
 }
 
 .selected {
-  border: 2px solid rgb(255, 0, 0);
+  border: 3px solid rgb(255, 0, 0);
+  /* background-color: red; */
 }
 
 .container {
@@ -151,15 +219,23 @@ img {
   padding-top: 5em;
 }
 
+.puzzle-container {
+  background-image: url(https://i.pinimg.com/originals/b3/82/f6/b382f6ced3915eb59b5b640ac6fd7b29.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 675px;
+  background-position: top;
+  display: flex;
+  align-content: center;
+  flex-direction: column;
+}
+
 .puzzle {
   display: flex;
   justify-content: center;
-  margin: 20px;
-}
-
-.alphabet {
-  width: 60%;
-  height: auto;
+  align-content: center;
+  margin: auto;
+  background-color: white;
 }
 
 .puz-change {
@@ -172,14 +248,31 @@ img {
 .puz-change img {
   width: 90px;
   height: 90px;
+  cursor: pointer;
 }
 
-.puzzle-container {
-  background-image: url(https://i.pinimg.com/originals/b3/82/f6/b382f6ced3915eb59b5b640ac6fd7b29.jpg);
-  background-size: cover;
-  width: 1300px;
-  height: 650px;
-  background-position: top;
+.puz-message {
+  background-color: white;
+  /* display: inline-block; */
+}
+
+.timer {
+  justify-content: center;
+  align-content: center;
+  border: 3px solid red;
+  background-color: white;
+  margin: auto;
+  position: relative;
+  width: 200px;
+}
+
+.alphabet {
+  width: 70%;
+  height: auto;
+}
+
+.navImg {
+  height: 60px;
 }
 
 /* .login-container {

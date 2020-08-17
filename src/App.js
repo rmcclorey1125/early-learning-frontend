@@ -33,11 +33,11 @@ class App extends React.Component {
     let t = text.toLowerCase().split(' ')
     let r = reading.toLowerCase().split(' ')
 
-    // console.log(rParts)
+    console.log("reading", r)
     // console.log(tParts)
     
     let common = t.filter(word => r.includes(word))
-    let uncommon = r.filter(word => !t.includes(word))
+    let uncommon = t.filter(word => !r.includes(word))
 
     this.setState({
       abcEnd: true,
@@ -74,10 +74,8 @@ class App extends React.Component {
 
 
   render () {
-
     return (
       <div className="App">
-        <h1>Early Learning Games!</h1>
         <NavBar handleLogout={this.handleLogout} user={this.state.user}/>
         <Switch>
           <Route exact path="/" render={routerProps => <Home {...routerProps}/>}/>
