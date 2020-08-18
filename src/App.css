@@ -78,25 +78,28 @@
   align-self: center;
   position: absolute;
   cursor: pointer;
-
+  width: 20px;
+  height: 50px;
 }
 
 .dog-bark {
   position: relative;
-  top: 450px;
-  right: 210px;
+  height: 200px;
+  width: auto;
+  top: 250px;
+  right: 400px;
 }
 
 .cat {
   position: relative;
-  top: 420px;
-  right: 150px;
+  bottom: 5px;
+  right: 100px;
 }
 
 .bee {
   position: relative;
-  top: 240px;
-  right: 550px;
+  bottom: 300px;
+  right: 350px;
   height: 75px;
   width: auto;
   margin: auto;
@@ -104,7 +107,7 @@
 
 .bird {
   position: relative;
-  left: 200px;
+  right: 180px;
 }
 
 #home-puzzle {

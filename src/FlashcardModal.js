@@ -45,7 +45,7 @@ class FlashcardModal extends React.Component {
   handleClick = () => {
     const {id, name, details_front, details_back, img_front} = this.state
     
-    fetch(`http://localhost:3000/api/v1/flashcards/${id}`,{
+    fetch(`http://early-learning.herokuapp.com/api/v1/flashcards/${id}`,{
       method:(id ? 'PATCH' : 'POST'),
       headers:{
         'Content-Type':'application/json',

@@ -46,7 +46,7 @@ class App extends React.Component {
     })
     // alert(`You got ${common.length} of 26 letters correct you missed ${uncommon}`)
 
-    fetch('http://localhost:3000/api/v1/games',{
+    fetch('http://early-learning.herokuapp.com/api/v1/games',{
       method:"POST",
       headers:{
         'Content-Type':'application/json',

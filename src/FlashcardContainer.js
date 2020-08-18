@@ -22,7 +22,7 @@ class FlashcardContainer extends React.Component{
     }
 
     deleteFlashcard = (id) =>{
-        fetch(`http://localhost:3000/api/v1/flashcards/${id}`,{
+        fetch(`http://early-learning.herokuapp.com/api/v1/flashcards/${id}`,{
           method:"DELETE",
           headers:{
             'Content-Type':'application/json',
@@ -58,7 +58,7 @@ class FlashcardContainer extends React.Component{
 
     componentDidMount(){
 
-        fetch("http://localhost:3000/api/v1/flashcards")
+        fetch("http://early-learning.herokuapp.com/api/v1/flashcards")
         .then(resp => resp.json())
         .then(flashcards => {
             this.setState({ flashcards })

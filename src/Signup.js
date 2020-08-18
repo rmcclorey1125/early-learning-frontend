@@ -18,7 +18,7 @@ class Signup extends React.Component {
         if (this.state.password !== this.state.confirmation){
             alert("Your Password does not match!")
         } else {
-            fetch('http://localhost:3000/api/v1/users', {
+            fetch('http://early-learning.herokuapp.com/api/v1/users', {
                 method:'POST',
                 headers:{
                 'Content-Type':'application/json',

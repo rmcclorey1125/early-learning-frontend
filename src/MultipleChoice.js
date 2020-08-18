@@ -1,6 +1,6 @@
 import React from 'react'
 
-const API = 'http://localhost:3000/api/v1/questions'
+const API = 'http://early-learning.herokuapp.com/api/v1/questions'
 
 class MultipleChoice extends React.Component {
 
@@ -70,7 +70,7 @@ class MultipleChoice extends React.Component {
             this.setState({
                 score: this.state.score + 1
             })
-            fetch('http://localhost:3000/api/v1/games',{
+            fetch('http://early-learning.herokuapp.com/api/v1/games',{
                 method:"POST",
                 headers:{
                   'Content-Type':'application/json',
@@ -87,7 +87,7 @@ class MultipleChoice extends React.Component {
                 console.log(game)
               })
         }else {
-            fetch('http://localhost:3000/api/v1/games',{
+            fetch('http://early-learning.herokuapp.com/api/v1/games',{
                 method:"POST",
                 headers:{
                   'Content-Type':'application/json',

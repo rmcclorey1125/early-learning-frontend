@@ -14,7 +14,7 @@ class Login extends React.Component {
 
     submitHandler = e => {
         e.preventDefault()
-        fetch('http://localhost:3000/api/v1/login', {
+        fetch('http://early-learning.herokuapp.com/api/v1/login', {
             method:'POST',
             headers:{
               'Content-Type':'application/json',
