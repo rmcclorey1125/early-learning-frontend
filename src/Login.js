@@ -57,11 +57,11 @@ class Login extends React.Component {
                         <Form.Control type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.changeHandler}/>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="outline-primary" className="log-btn" type="submit">
                         Log in
                     </Button>
 
-                    <Button variant="info" onClick={this.props.toggleNewUser}>
+                    <Button variant="outline-warning" className="log-btn" onClick={this.props.toggleNewUser}>
                         Signup
                     </Button>
                 </Form>

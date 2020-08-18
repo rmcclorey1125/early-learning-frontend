@@ -5,20 +5,24 @@ const ScoreCard = (props) => {
 
     let date = new Date(props.created_at);
     let showDate =  (date.getMonth()+1) + '-'+ date.getDate() + '-' + date.getFullYear()
-    let notice
+    let noticeQuiz
+    let noticeAlpha
+    let noticePuz
 
     if(props.game_type === "Quiz"){
-        notice = `On ${showDate}, you got ${((props.score/5)*100).toFixed(2)}% correct in the ${props.game_type} game.`
+        noticeQuiz = `On ${showDate}, you got ${((props.score/5)*100).toFixed(2)}% correct in the ${props.game_type} game.`
     }else if(props.game_type === "Alphabet"){
-        notice = `On ${showDate}, you got ${((props.score/26)*100).toFixed(2)}% correct in the ${props.game_type} game.`
+        noticeAlpha = `On ${showDate}, you got ${((props.score/26)*100).toFixed(2)}% correct in the ${props.game_type} game.`
     }else if(props.game_type === "Puzzle"){
-        notice = `On ${showDate}, you completed the ${props.game_type} game in ${props.score} seconds.`
+        noticePuz = `On ${showDate}, you completed the ${props.game_type} game in ${props.score} seconds.`
     }
-
+    
     return(
         <>
-            <div className="notice-list">
-                <div>{notice}</div>
+            <div className="notice-container">
+                <div className="notices">{noticeQuiz}</div>
+                <div className="notices">{noticeAlpha}</div>
+                <div className="notices">{noticePuz}</div>
             </div>
         </>
 )

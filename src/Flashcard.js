@@ -18,7 +18,7 @@ class Flashcard extends React.Component {
                 onClick={this.changeFlip}
                 >
                     <div className="front">
-                        <img src={this.props.details_front} alt={this.props.name} />
+                        <img className="flash-img" src={this.props.details_front} alt={this.props.name} />
                     </div>
     
                     <div className="back">

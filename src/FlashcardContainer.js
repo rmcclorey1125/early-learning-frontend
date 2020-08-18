@@ -1,7 +1,7 @@
 import React from 'react'
 import Flashcard from './Flashcard'
 import FlashcardModal from './FlashcardModal';
-// import {Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 
 class FlashcardContainer extends React.Component{
 
@@ -82,7 +82,7 @@ class FlashcardContainer extends React.Component{
                     })}
                 </div>
 
-                <button onClick={this.toggleModal}>Create New Flashcard</button>
+                <Button variant="outline-success" onClick={this.toggleModal}>Create New Flashcard</Button>
 
                 <div>
                     <FlashcardModal 

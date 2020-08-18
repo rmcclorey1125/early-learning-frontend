@@ -1,4 +1,5 @@
 import React from 'react'
+import { Button } from 'react-bootstrap'
 
 const API = 'http://localhost:3000/api/v1/questions'
 
@@ -39,7 +40,8 @@ class MultipleChoice extends React.Component {
     
         this.setState({
             currentIndex: this.state.currentIndex + 1,
-            userAnswer: null
+            userAnswer: null,
+            disabled: true
         })
     }
 
@@ -122,8 +124,8 @@ class MultipleChoice extends React.Component {
         if(quizEnd) {
             return (
                 <div>
-                    <h2>You answered {score} out of {this.state.questions.length} correct</h2>
-                    <button onClick={()=>{this.props.history.push(``)}}>Return Home</button>
+                    <h2 className="result">You answered {score} out of {this.state.questions.length} correct</h2>
+                    <Button variant="outline-info" className="qu-button" onClick={()=>{this.props.history.push(``)}}>Return Home</Button>
                 </div>
             )
         } else {
@@ -141,13 +143,13 @@ class MultipleChoice extends React.Component {
                     }
                     <div>
                         {currentIndex < this.state.questions.length - 1 &&
-                        <button disabled = {this.state.disabled} onClick={this.nextQuestionHandler}>
+                        <Button variant="outline-success" className="qu-button" disabled = {this.state.disabled} onClick={this.nextQuestionHandler}>
                             Next Question
-                        </button>}
+                        </Button>}
                         {currentIndex === this.state.questions.length - 1 && 
-                        <button disabled = {this.state.disabled} onClick={this.finishHandler}>
+                        <Button variant="outline-danger" className="qu-button" disabled = {this.state.disabled} onClick={this.finishHandler}>
                             Submit
-                        </button>
+                        </Button>
                         }
                     </div>
                 </div> 

@@ -1,5 +1,6 @@
 import React from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import { Button } from 'react-bootstrap'
 
 const Speaking = (props) => {
   const { transcript, resetTranscript } = useSpeechRecognition()
@@ -15,7 +16,7 @@ const Speaking = (props) => {
           <>
             <h1>You got {((props.abcRight.length/26)*100).toFixed(2)}%</h1>
             <h1>You missed {props.abcWrong.map(letter => <h3>{letter}</h3>)}</h1>
-            <button onClick={()=>{props.history.push(``); props.endAbc();}}>Return Home</button>
+            <Button variant="outline-info" onClick={()=>{props.history.push(``); props.endAbc();}}>Return Home</Button>
           </>
       )
   } else {
@@ -23,10 +24,10 @@ const Speaking = (props) => {
         <div>
             <img className="alphabet" src="https://www.english-learn-online.com/wp-content/uploads/alphabet-featured-1230x660-696x373.jpg" />
             <br></br>
-            <button onClick={() => SpeechRecognition.startListening({ continuous:true })}>Start</button>
-            <button onClick={SpeechRecognition.stopListening}>Stop</button>
-            <button onClick={resetTranscript}>Reset</button>
-            <button onClick={() => props.evaluate(text,reading)}>Submit</button>
+            <Button variant="outline-success" className="speech-controls" onClick={() => SpeechRecognition.startListening({ continuous:true })}>Start</Button>
+            <Button variant="outline-danger" className="speech-controls" onClick={SpeechRecognition.stopListening}>Stop</Button>
+            <Button variant="outline-warning" className="speech-controls" onClick={resetTranscript}>Reset</Button>
+            <Button variant="outline-dark" className="speech-controls" onClick={() => props.evaluate(text,reading)}>Submit</Button>
     
             <h1>{reading}</h1>
         </div>

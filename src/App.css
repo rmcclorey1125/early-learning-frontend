@@ -78,25 +78,28 @@
   align-self: center;
   position: absolute;
   cursor: pointer;
-
+  width: 20px;
+  height: 50px;
 }
 
 .dog-bark {
   position: relative;
-  top: 450px;
-  right: 210px;
+  height: 200px;
+  width: auto;
+  top: 250px;
+  right: 400px;
 }
 
 .cat {
   position: relative;
-  top: 420px;
-  right: 150px;
+  bottom: 5px;
+  right: 100px;
 }
 
 .bee {
   position: relative;
-  top: 240px;
-  right: 550px;
+  bottom: 300px;
+  right: 350px;
   height: 75px;
   width: auto;
   margin: auto;
@@ -104,7 +107,7 @@
 
 .bird {
   position: relative;
-  left: 200px;
+  right: 180px;
 }
 
 #home-puzzle {
@@ -246,6 +249,11 @@ img {
   right:0;
 }
 
+.flash-img {
+  height: 50%;
+  width: 100%;
+}
+
 .login-form {
   width: 40%;
   margin: auto;
@@ -286,7 +294,15 @@ img {
 
 .puz-message {
   background-color: white;
+  margin: auto;
+  margin-bottom: 10px;
   /* display: inline-block; */
+}
+
+.puz-btn {
+  margin: auto;
+  margin-top: 20px;
+
 }
 
 .timer {
@@ -297,6 +313,7 @@ img {
   margin: auto;
   position: relative;
   width: 200px;
+  border-radius: 25px;
 }
 
 .alphabet {
@@ -307,6 +324,68 @@ img {
 .navImg {
   height: 60px;
 }
+
+.log-btn {
+  margin: 5px;
+}
+
+.speech-controls {
+  margin: 10px;
+}
+
+.qu-button {
+  margin-top: 25px;
+}
+
+.result {
+  margin-top: 20%;
+}
+
+.notice-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.notices {
+  border: 1px solid black;
+}
+
+/* .next-qu {
+  background-color: white;
+  color: black;
+  border: 2px solid green;
+  transition-duration: 0.4s;
+}
+
+.submit-qu {
+  background-color: white;
+  color: black;
+  border: 2px solid red;
+  transition-duration: 0.4s;
+}
+
+.return-home {
+  background-color: white;
+  color: black;
+  border: 2px solid blue;
+  transition-duration: 0.4s;
+}
+
+.next-qu:hover {
+  background-color: green;
+  color: white;
+}
+
+.submit-qu:hover {
+  background-color: red;
+  color: white;
+}
+
+.return-home:hover {
+  background-color: blue;
+  color: white;
+} */
 
 
 /* .login-container {

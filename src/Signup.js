@@ -70,11 +70,11 @@ class Signup extends React.Component {
                         <Form.Control type="password" placeholder="Re-Type Password" name="confirmation" value={this.state.confirmation} onChange={this.changeHandler}/>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit">
+                    <Button variant="outline-warning" className="log-btn" type="submit">
                         Sign up
                     </Button>
 
-                    <Button variant="info" onClick={this.props.toggleNewUser}>
+                    <Button variant="outline-primary" className="log-btn" onClick={this.props.toggleNewUser}>
                         Login
                     </Button>
                 </Form>
