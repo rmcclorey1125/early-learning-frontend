@@ -1,4 +1,5 @@
 import React from 'react'
+import ConfettiWin from './ConfettiWin'
 import { Button } from 'react-bootstrap'
 
 const API = 'http://localhost:3000/api/v1/questions'
@@ -123,15 +124,16 @@ class MultipleChoice extends React.Component {
         const {question, options, currentIndex, userAnswer, quizEnd, score} = this.state
         if(quizEnd) {
             return (
-                <div>
+                <div className="quiz-bg">
                     <h2 className="result">You answered {score} out of {this.state.questions.length} correct</h2>
                     <Button variant="outline-info" className="qu-button" onClick={()=>{this.props.history.push(``)}}>Return Home</Button>
+                    {score === 5? <ConfettiWin /> : null}
                 </div>
             )
         } else {
             return (
-                <div>
-                    <h2>{question}</h2>
+                <div className="quiz-bg">
+                    <h2 className='quiz-qu'>{question}</h2>
                     <p className='quiz-qu'>{`Question ${currentIndex + 1} of ${this.state.questions.length}`}</p>
                     {
                         options.map(option => 

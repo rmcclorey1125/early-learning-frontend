@@ -1,5 +1,6 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
+import ConfettiWin from './ConfettiWin'
 import Puzzle from 'react-image-puzzle';
 
 class PuzzleGame extends React.Component {
@@ -40,39 +41,24 @@ class PuzzleGame extends React.Component {
           .then(this.setState({puzzleComplete: true}))
     }
 
-    levelEasy = () => {
-        this.setState({
-            level: 2
-        })
-    }
-
-    levelMedium = () => {
-        this.setState({
-            level: 3
-        })
-    }
-
-    levelHard = () => {
-        this.setState({
-            level: 5
-        })
-    }   
-
     imgBlaze = () => {
         this.setState({
-            image: "https://i0.wp.com/intheplayroom.co.uk/wp-content/uploads/2015/03/blazemonstermachines-1024x821.jpg?resize=1024%2C821"
+            image: "https://i0.wp.com/intheplayroom.co.uk/wp-content/uploads/2015/03/blazemonstermachines-1024x821.jpg?resize=1024%2C821",
+            count: 0
         })
     }   
     
     imgPawpatol = () => {
         this.setState({
-            image: "https://4.bp.blogspot.com/-NDWfppuLSlc/WwRIIoIn3OI/AAAAAAAA6OQ/1WTdcONWjSgwjpnd2Gpp5ncMsV7E-DGcgCLcBGAs/s1600/Paw_Patrol_Core_Poster_TM_Towerl_Nick_Jr_Nickelodeon_Preschool_USA_Press.jpg"
+            image: "https://4.bp.blogspot.com/-NDWfppuLSlc/WwRIIoIn3OI/AAAAAAAA6OQ/1WTdcONWjSgwjpnd2Gpp5ncMsV7E-DGcgCLcBGAs/s1600/Paw_Patrol_Core_Poster_TM_Towerl_Nick_Jr_Nickelodeon_Preschool_USA_Press.jpg",
+            count: 0
         })
     }   
 
     imgMickey = () => {
         this.setState({
-            image: "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/EF6763AC142C3E0457AE9CF07EF200C0147E25800E249C550AB6FBC87B8CA62A"
+            image: "https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/EF6763AC142C3E0457AE9CF07EF200C0147E25800E249C550AB6FBC87B8CA62A",
+            count: 0
         })
     }   
 
@@ -83,6 +69,7 @@ class PuzzleGame extends React.Component {
                 <>
                     <h1 className="puz-message">You completed the Puzzle in {this.state.count} seconds</h1>
                     <Button variant="outline-info" className="puz-btn" onClick={()=>{this.props.history.push(``)}}>Return Home</Button>
+                    {this.state.count <= 60? <ConfettiWin /> : null}
                 </>
                 :
                 <>

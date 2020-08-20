@@ -133,7 +133,6 @@
   background-image: url(./Pictures/Flash.png);
   background-color: rgba(255, 255, 255, 0.5);
   background-blend-mode: lighten;
-
 }
 
 #home-score {
@@ -170,7 +169,7 @@ img {
 }
 
 .quiz-qu {
-  margin-top: 10px;
+  padding-top: 15px;
 }
 
 .options {
@@ -179,17 +178,26 @@ img {
   flex-wrap: wrap;
   padding: 3px;
   margin: 6px;
-  /* border: 1px solid black */
+  border: 1px solid black;
+  background-color: white;
 }
 
 .selected {
-  border: 3px solid rgb(255, 0, 0);
+  border: 5px solid rgb(255, 0, 0);
   /* background-color: red; */
 }
 
 .container {
   max-width: 900px;
   margin: 1rem 2rem;
+}
+
+.full-flashcard {
+  background-image: url(./Pictures/large-fc.png);
+  background-size: cover;
+  width: 100%;
+  height: 675px;
+  /* background-position: top; */
 }
 
 .card-grid {
@@ -338,18 +346,67 @@ img {
 }
 
 .result {
-  margin-top: 20%;
+  padding-top: 20%;
 }
 
 .notice-container {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
 }
 
-.notices {
+.puzzle-score {
   border: 1px solid black;
+  width: 30%;
+  margin-top: 15px;
+  border-radius: 25px;
+
+  background-image: url(./Pictures/Puzzle.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+  background-size: cover;
 }
+
+.quiz-score {
+  border: 1px solid black;
+  width: 30%;
+  margin-top: 15px;
+  border-radius: 25px;
+
+  background-image: url(./Pictures/Quiz.png);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+}
+
+.alphabet-score {
+  border: 1px solid black;
+  width: 30%;
+  margin-top: 15px;
+  border-radius: 25px;
+
+  background-image: url(https://cf.ltkcdn.net/boardgames/images/std/50630-425x282-LetterJumble.jpg);
+  background-color: rgba(255, 255, 255, 0.5);
+  background-blend-mode: lighten;
+}
+
+.notices {
+  margin: 2px;
+}
+
+.quiz-bg {
+  background-image: url(https://www.headfirstevents.com/wp-content/uploads/2013/05/question-mark-background-vector.jpg);
+  background-color: rgba(255, 255, 255, 0.8);
+  background-blend-mode: lighten;
+  background-size: cover;
+  width: 100%;
+  height: 675px;
+  background-position: top;
+}
+
+/* .puzzle-notice {
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+} */
 
 /* .next-qu {
   background-color: white;

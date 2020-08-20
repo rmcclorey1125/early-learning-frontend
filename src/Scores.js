@@ -1,5 +1,8 @@
 import React from 'react'
 import ScoreCard from './ScoreCard'
+import QuizCard from './QuizCard'
+import AlphabetCard from './AlphabetCard'
+import PuzzleCard from './PuzzleCard'
 
 
 class Scores extends React.Component{
@@ -16,16 +19,45 @@ class Scores extends React.Component{
 
     render() {
         return(
-            <div>
-                {this.state.games.map(game => {
-                    if(this.props.user){
-                        if(game.user_id === this.props.user.id){
-                            return <ScoreCard {...game} key={game.id} />
-                        }
-                    }else{
-                        this.props.history.push('/Auth')
-                    }
-                })}
+            <div className="notice-container">
+                {this.props.user? 
+                <>
+                    <div className="quiz-score">
+                        <h2>Quiz Scores</h2>
+                        {this.state.games.map(game => {
+                            if(game.user_id === this.props.user.id){
+                                if(game.game_type === "Quiz"){
+                                    return <QuizCard {...game} key={game.id} />
+                                }
+                            }
+                        })}
+                    </div>
+                    <div className="alphabet-score">
+                        <h2>Alphabet Scores</h2>
+                        {this.state.games.map(game => {
+                            if(game.user_id === this.props.user.id){
+                                if(game.game_type === "Alphabet"){
+                                    return <AlphabetCard {...game} key={game.id} />
+                                }
+                            }
+                        })}
+                    </div> 
+                    <div className="puzzle-score">
+                        <h2>Puzzle Scores</h2>
+                        {this.state.games.map(game => {
+                            if(game.user_id === this.props.user.id){
+                                if(game.game_type === "Puzzle"){
+                                    return <PuzzleCard {...game} key={game.id} />
+                                }
+                            }
+                        })}
+                    </div> 
+                </>
+
+                    :
+
+                this.props.history.push('/Auth')}
+
             </div>
         )
     }

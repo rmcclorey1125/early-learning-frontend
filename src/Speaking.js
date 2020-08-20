@@ -1,5 +1,6 @@
 import React from 'react'
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition'
+import ConfettiWin from './ConfettiWin'
 import { Button } from 'react-bootstrap'
 
 const Speaking = (props) => {
@@ -17,6 +18,7 @@ const Speaking = (props) => {
             <h1>You got {((props.abcRight.length/26)*100).toFixed(2)}%</h1>
             <h1>You missed {props.abcWrong.map(letter => <h3>{letter}</h3>)}</h1>
             <Button variant="outline-info" onClick={()=>{props.history.push(``); props.endAbc();}}>Return Home</Button>
+            {props.abcRight.length === 26? <ConfettiWin /> : null}
           </>
       )
   } else {

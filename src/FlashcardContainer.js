@@ -68,7 +68,7 @@ class FlashcardContainer extends React.Component{
     render() {
         const flashcardToBeEdited = this.state.editId ? this.state.flashcards.find(card => card.id === this.state.editId) : null;
         return (
-            <>
+            <div className="full-flashcard">
                 <h1>My FlashCards</h1>
                 <div className='card-grid'>
                     {this.state.flashcards.map(card => {
@@ -94,7 +94,7 @@ class FlashcardContainer extends React.Component{
                         flashcardToBeEdited={flashcardToBeEdited}
                     />
                 </div>
-            </>
+            </div>
         )
     }
 }
