@@ -113,11 +113,6 @@ class MultipleChoice extends React.Component {
                 quizEnd:true
             })
         }
-
-
-        //   .then(this.setState({
-        //       score: 0
-        //   }))
     }
     
     render() {
@@ -125,7 +120,7 @@ class MultipleChoice extends React.Component {
         if(quizEnd) {
             return (
                 <div className="quiz-bg">
-                    <h2 className="result">You answered {score} out of {this.state.questions.length} correct</h2>
+                    <h1 className="result">You answered {score} out of {this.state.questions.length} correct</h1>
                     <Button variant="outline-info" className="qu-button" onClick={()=>{this.props.history.push(``)}}>Return Home</Button>
                     {score === 5? <ConfettiWin /> : null}
                 </div>

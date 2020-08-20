@@ -44,7 +44,6 @@ class App extends React.Component {
       abcRight: common,
       abcWrong: uncommon
     })
-    // alert(`You got ${common.length} of 26 letters correct you missed ${uncommon}`)
 
     fetch('http://localhost:3000/api/v1/games',{
       method:"POST",
@@ -85,12 +84,6 @@ class App extends React.Component {
           <Route exact path="/Flashcards" render={routerProps => <FlashcardContainer {...routerProps} user={this.state.user}/>}/>
           <Route exact path="/Scores" render={routerProps => <Scores {...routerProps} user={this.state.user}/>}/>
           <Route exact path="/Auth" render={routerProps => !this.state.user ? <Auth {...routerProps} handleUser={this.handleUser}/>:<Redirect to="/" />}/> 
-          
-
-          {/* <Route exact path="/Matchcards" render={routerProps => <MatchCardContainer {...routerProps} user={this.state.user}/>}/>
-          <Route exact path="/Anime/:id" render={routerProps => <AnimePage user={this.state.user} handleUnfavorite={this.handleUnfavorite} {...routerProps} deleteAnime={this.deleteAnime} updateAnimeList={this.updateAnimeList} animes={this.state.animes} handleFavorite={this.handleFavorite}/>}/>
-          <Route exact path="/Profile" render={routerProps => this.state.user ? <Profile {...routerProps} user={this.state.user} animes={this.currentUserfavorites()}/>:<Redirect to="/login" />}/>
-          <Route path="*" component={NoMatch}/> */}
         </Switch>
       </div>
     );

@@ -10,7 +10,6 @@ class Flashcard extends React.Component {
     this.setState({flip: !this.state.flip})
 
     render() {
-        // console.log("my Props", this.props.id)
         if(this.props.img_front){
             return (
                 <div 
@@ -58,5 +57,3 @@ class Flashcard extends React.Component {
 }
 
 export default Flashcard
-
-{/* {this.state.flip ? this.props.details_back : this.props.details_front} */}

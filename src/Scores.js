@@ -1,5 +1,4 @@
 import React from 'react'
-import ScoreCard from './ScoreCard'
 import QuizCard from './QuizCard'
 import AlphabetCard from './AlphabetCard'
 import PuzzleCard from './PuzzleCard'

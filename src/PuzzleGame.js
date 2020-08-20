@@ -74,10 +74,6 @@ class PuzzleGame extends React.Component {
                 :
                 <>
                     <div>
-                        {/* <h3>Level of difficulty</h3>
-                        <button onClick={this.levelEasy}>Easy</button>
-                        <button onClick={this.levelMedium}>Medium</button>
-                        <button onClick={this.levelHard}>Hard</button> */}
                         <div className="puz-change" onClick={this.imgPawpatol}><img src="https://4.bp.blogspot.com/-NDWfppuLSlc/WwRIIoIn3OI/AAAAAAAA6OQ/1WTdcONWjSgwjpnd2Gpp5ncMsV7E-DGcgCLcBGAs/s1600/Paw_Patrol_Core_Poster_TM_Towerl_Nick_Jr_Nickelodeon_Preschool_USA_Press.jpg" /></div>
                         <div className="puz-change" onClick={this.imgBlaze}><img src="https://i0.wp.com/intheplayroom.co.uk/wp-content/uploads/2015/03/blazemonstermachines-1024x821.jpg?resize=1024%2C821" /></div>
                         <div className="puz-change" onClick={this.imgMickey}><img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/EF6763AC142C3E0457AE9CF07EF200C0147E25800E249C550AB6FBC87B8CA62A" /></div>

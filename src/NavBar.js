@@ -6,7 +6,6 @@ import { Nav, Navbar, FormControl, Form, Button, NavDropdown } from 'react-boots
 const NavBar = (props) => {
     return(
         <Navbar bg="primary" variant="dark">
-            {/* <Navbar.Brand as={Link} to="/">Learning</Navbar.Brand> */}
             <Navbar.Brand as={Link} to="/">
                 <img
                     src="/FullLogoNoBG.png"
@@ -17,8 +16,8 @@ const NavBar = (props) => {
                 />
             </Navbar.Brand>
             <Nav className="mr-auto">
-                <Nav.Link as={Link} to="/">Home</Nav.Link>
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <Nav.Link as={Link} to="/" className="nav-opt">Home</Nav.Link>
+                <NavDropdown title="Dropdown" className="nav-opt" id="basic-nav-dropdown">
                     <NavDropdown.Item as={Link} to="/MultipleChoice">Quizzes</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/Speak">Alphabet</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/PuzzleGame">Puzzle</NavDropdown.Item>
@@ -31,10 +30,10 @@ const NavBar = (props) => {
             {
                     props.user
                     ? 
-                    <Button variant="outline-info" onClick={props.handleLogout}>Log Out</Button>
+                    <Button variant="outline-info" onClick={props.handleLogout} className="nav-opt">Log Out</Button>
                     :
                     <Nav.Link as={Link} to="/Auth">
-                        <Button>Log In</Button>
+                        <Button className="nav-opt">Log In</Button>
                     </Nav.Link>
                 }    
             </Form>

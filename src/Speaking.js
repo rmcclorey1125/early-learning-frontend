@@ -15,7 +15,7 @@ const Speaking = (props) => {
   if(props.abcEnd){
       return (
           <>
-            <h1>You got {((props.abcRight.length/26)*100).toFixed(2)}%</h1>
+            <h1 className="abc-result">You got {((props.abcRight.length/26)*100).toFixed(2)}%</h1>
             <h1>You missed {props.abcWrong.map(letter => <h3>{letter}</h3>)}</h1>
             <Button variant="outline-info" onClick={()=>{props.history.push(``); props.endAbc();}}>Return Home</Button>
             {props.abcRight.length === 26? <ConfettiWin /> : null}
@@ -38,16 +38,3 @@ const Speaking = (props) => {
 
 }
 export default Speaking
-
-    // let length = tParts.length
-    // let score = 0
-    // if(tParts === rParts){
-    //     score = score + 1
-    // }
-    // for(let i = 0; i<tParts.length; i++){
-    //     if(tParts[i] !== rParts[i]){
-    //         score = score - 1;
-    //     } 
-    // }
-    // alert(score) 
-    // Math.round(100*(score/length))

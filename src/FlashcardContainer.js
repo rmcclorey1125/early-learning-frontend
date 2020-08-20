@@ -5,8 +5,6 @@ import {Button} from 'react-bootstrap'
 
 class FlashcardContainer extends React.Component{
 
-    // const [flashcards, setFlashcards] = useState()
-
     state= {
         flashcards: [],
         showModal: false,

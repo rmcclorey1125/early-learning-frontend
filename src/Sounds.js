@@ -55,7 +55,6 @@ class Sounds extends React.Component {
     render() {
       return (
         <>
-          {/* <button >{this.state.play ? 'Pause' : 'Play'}</button> */}
           <img src="https://media2.giphy.com/media/d9UAwX6gd6d3zYrTF5/giphy.gif?cid=ecf05e4714kaojl2c4wiqyo0786zf0oyya9b9pdifyu372jc&rid=giphy.gif" alt="bird" className="bird" onClick={this.togglePlayBird}/>
           <img src="/dog-bark.gif" className="dog-bark" alt="dog" onClick={this.togglePlayDog} />
           <img src="/cat-gif.gif" className="cat" alt="cat" onClick={this.togglePlayCat} />

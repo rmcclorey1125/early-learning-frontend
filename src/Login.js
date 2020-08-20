@@ -28,7 +28,6 @@ class Login extends React.Component {
         .then(resp => resp.json())
         .then(user => {
             if(user){
-                // window.localStorage.setItem("user", JSON.stringify(user))
                 this.props.handleUser(user)
                 this.props.history.push('/')
             }else{
